@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: black;
+  font-size: 16px;
+  background-color: #f6f6ef;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
+.app {
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.app h1 {
+  color: #ff6601;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px red, 2px 2px yellow, 3px 3px blue;
+}
+.items {
+  display: grid;
+  row-gap: 1rem;
+}
+.post {
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 1rem;
+  display: grid;
+  row-gap: 8px;
+}
+.post__title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.post__metadata {
+  font-size: 14px;
+  color: #444;
+}
+.dots-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #ff6600;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #ff6600;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #ff6600;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #ff6600;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+}
+.load-more-btn {
+  background-color: #ff6600;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.load-more-btn:hover {
+  background-color: orange;
+}
+.load-more-btn:disabled {
+  background-color: grey;
+}
